@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-clash: 'Clash Display', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #050505;
+  color: #ffffff;
+  font-family: var(--font-inter);
+}
+
+.font-clash {
+  font-family: var(--font-clash);
+}
+
+.font-inter {
+  font-family: var(--font-inter);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Selection */
+::selection {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+/* Reveal animation */
+.animate-reveal-up {
+  animation: revealUp 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes revealUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover scale for images */
+.hover-scale {
+  transition: transform 2s ease-out;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* Mix blend navigation */
+.mix-blend-nav {
+  mix-blend-mode: difference;
+}
+
+/* Atmospheric light leaks */
+.light-leak-orange {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(120px);
+  background: rgba(249, 115, 22, 0.05);
+  mix-blend-mode: screen;
+}
+
+.light-leak-blue {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(120px);
+  background: rgba(30, 58, 138, 0.05);
+  mix-blend-mode: screen;
+}
