@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { ArrowUpRight, Mail, Github as GitHubIcon, TwitterIcon, Gamepad2, Code2, Palette, Sparkles } from "lucide-react";
+import { ArrowUpRight, Mail, Gamepad2, Code2, Palette, Sparkles } from "lucide-react";
 
 function RevealUp({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
   const ref = useRef(null);
@@ -255,10 +255,10 @@ function FooterSection() {
         <RevealUp delay={0.2}>
           <div className="flex items-center justify-center gap-8 mt-16">
             <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-white transition-colors">
-              <GitHubIcon className="w-5 h-5" />
+              <span className="text-sm font-bold">GH</span>
             </a>
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-white transition-colors">
-              <TwitterIcon className="w-5 h-5" />
+              <span className="text-sm font-bold">X</span>
             </a>
             <a href="mailto:hello@littletho.dev" className="text-white/40 hover:text-white transition-colors">
               <Mail className="w-5 h-5" />
