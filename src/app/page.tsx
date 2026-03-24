@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { ArrowUpRight, Mail, Github, Twitter, Gamepad2, Code2, Palette, Sparkles } from "lucide-react";
+import { ArrowUpRight, Mail, Github, TwitterIcon, Gamepad2, Code2, Palette, Sparkles } from "lucide-react";
 
 function RevealUp({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
   const ref = useRef(null);
@@ -123,7 +123,7 @@ function AboutSection() {
             </RevealUp>
             <RevealUp delay={0.2}>
               <p className="text-xl lg:text-2xl font-light leading-relaxed text-white/80 mb-8 max-w-3xl">
-                I'm an independent game developer passionate about creating unique gaming experiences. 
+                I&apos;m an independent game developer passionate about creating unique gaming experiences. 
                 With expertise in Unity, Unreal Engine, and custom game frameworks, I bring ideas to life 
                 through code, art, and design.
               </p>
@@ -258,7 +258,7 @@ function FooterSection() {
               <Github className="w-5 h-5" />
             </a>
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-white transition-colors">
-              <Twitter className="w-5 h-5" />
+              <TwitterIcon className="w-5 h-5" />
             </a>
             <a href="mailto:hello@littletho.dev" className="text-white/40 hover:text-white transition-colors">
               <Mail className="w-5 h-5" />
